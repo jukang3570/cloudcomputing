@@ -407,6 +407,17 @@ strong {
   padding-bottom: 180px;
 }
 
+.selection-artist-page-hong{
+  background-image: url('../images/artist_page_hong/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: auto;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
 .section-hero::before {
   content: "";
   background: linear-gradient(to top, var(--dark-color), transparent 90%);
@@ -730,22 +741,6 @@ strong {
   color: var(--dark-color);
 }
 
-
-/*---------------------------------------
-  SITE FOOTER              
------------------------------------------*/
-.site-footer {
-  background: var(--primary-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.site-footer .copyright-text {
-  color: var(--white-color);
-  font-size: var(--copyright-text-font-size);
-}
-
-
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
@@ -930,3 +925,114 @@ strong {
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .row.gtr-200 {
+      margin-top: -72px;
+      margin-left: -72px;
+  }
+}
+
+/*---------------------------------------
+  ARTIST-PAGE              
+-----------------------------------------*/
+.wrapper {
+  background: #fff;
+  margin: 0 0 2em 0;
+  padding: 6em 0 6em 0;
+}
+
+.footer {
+  margin: 2.5em 0 0 0;
+  margin-top: 2.5em;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], art_button, .art_button {
+  position: relative;
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  text-decoration: none;
+  padding: 0.65em 3em 0.65em 3em;
+  padding-top: 0.65em;
+  padding-right: 3em;
+  padding-bottom: 0.65em;
+  padding-left: 3em;
+  border: 0;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: initial;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  cursor: pointer;
+  outline: 0;
+  font-weight: 300;
+  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  transition-behavior: normal, normal, normal;
+  transition-duration: 0.35s, 0.35s, 0.35s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s;
+  transition-property: background-color, color, border-bottom-color;
+  -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  transition-behavior: normal, normal, normal;
+  transition-duration: 0.35s, 0.35s, 0.35s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s;
+  transition-property: background-color, color, border-bottom-color;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.art_button:hover {
+  color: var(--secondary-color); /* 검정색으로 변경 */
+}
+
+b-text {
+    color: var(--p-color);
+    font-size: 17px;
+    font-weight: var(--font-weight-normal);
+  /*font-size: 1.25em;
+  font-weight: 400;
+  color: #483949;
+  line-height: 1.25em;*/
+}
+
+.image.featured {
+  display: block;
+  width: 100%;
+  margin: 0 0 4em 0;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 4em;
+  margin-left: 0px;
+}
+
+hr {
+  border: 1.5px solid #858585; /* 테두리 색상 및 두께 설정 */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 85%;
+}
