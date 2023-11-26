@@ -203,7 +203,6 @@ strong {
   left: 1px;
 }
 
-
 /*---------------------------------------
   CUSTOM BUTTON               
 -----------------------------------------*/
@@ -418,6 +417,28 @@ strong {
   padding-bottom: 180px;
 }
 
+.selection-artist-page-yoo{
+  background-image: url('../images/artist_page_yoo/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: auto;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.selection-artist-page-pyo{
+  background-image: url('../images/artist_page_pyo/background1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: auto;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
 .section-hero::before {
   content: "";
   background: linear-gradient(to top, var(--dark-color), transparent 90%);
@@ -614,6 +635,7 @@ strong {
   transform: scale(1.2);
 }
 
+
 .projects-thumb:hover .projects-title-wrap {
   padding-bottom: 30px;
 }
@@ -635,6 +657,16 @@ strong {
 
 .projects-small-title {
   color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.projects-small-title-white {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.projects-small-title-secondary {
+  color: var(--secondary-color);
   text-transform: uppercase;
 }
 
@@ -1014,10 +1046,6 @@ b-text {
     color: var(--p-color);
     font-size: 17px;
     font-weight: var(--font-weight-normal);
-  /*font-size: 1.25em;
-  font-weight: 400;
-  color: #483949;
-  line-height: 1.25em;*/
 }
 
 .image.featured {
@@ -1026,13 +1054,53 @@ b-text {
   margin: 0 0 4em 0;
   margin-top: 0px;
   margin-right: 0px;
-  margin-bottom: 4em;
+  margin-bottom: 1.5em;
   margin-left: 0px;
 }
 
 hr {
-  border: 1.5px solid #858585; /* 테두리 색상 및 두께 설정 */
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 85%;
+  border: none; /* 기본 테두리 제거 */
+  border-top: 1.7px solid #717171; /* 원하는 굵기와 색상으로 테두리 설정 */
+  margin-top: 10px; /* 상단 간격 조정 */
+  margin-bottom: 10px; /* 하단 간격 조정 */
+  width: 85%; /* 가로 길이 조정 */
 }
+
+#sidebar {
+  margin-bottom: 20px; /* 왼쪽 사이드바의 하단 간격 설정 */
+}
+
+#content {
+  margin-top: 20px; /* 오른쪽 큰 화면의 상단 간격 설정 */
+}
+
+#sidebar img {
+  margin-bottom: 0px; /* 원하는 간격으로 수정 */
+}
+
+/*---------------------------------------
+  ARTWORK-BUTTON              
+-----------------------------------------*/
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+
+.slidebox {max-width:auto;margin:0 auto;position:relative;}
+.slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow: hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#fff;width:100%;transition:all 1s;
+  padding-left: 18px; padding-right: 50px;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:-50px;background: url('../images/icon/left_ic.png') center center / 50% no-repeat; width: 150px; height: 150px;}
+.slidebox .slide-control [class*="control"] label.next {right:-50px;background: url('../images/icon/right_ic.png') center center / 50% no-repeat;width: 150px; height: 150px;}
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
