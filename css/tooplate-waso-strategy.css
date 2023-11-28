@@ -559,6 +559,11 @@ strong {
   padding: 40px;
 }
 
+.about-info {
+  white-space: normal; /* 또는 pre-wrap 등 */
+  overflow: hidden;
+}
+
 
 /*---------------------------------------
   SERVICES              
