@@ -11,3 +11,8 @@ class Post(models.Model):
     def update_counter(self):
         self.like += 1
         self.save()
+
+class Comment(models.Model):
+    exhibition = models.IntegerField()
+    comment = models.TextField()
+    date = models.DateTimeField(auto_now_add = True)

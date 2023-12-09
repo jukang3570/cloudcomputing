@@ -62,47 +62,39 @@ Free Bootstrap 5 HTML Template
                     <button style="background-color:white; border: none; width: 50px; float: right; margin-right: 150px; margin-top: 150px;"  onclick="location.href='http://127.0.0.1:8000';">
                         <img src="{%static 'images/next1.png' %}" alt="" style="width: 100%;">
                     </button>
-                    <div style="display: flex; justify-content: center;"> 
-                        <div class="col-lg-6 col-12 mb-5">
-
-                            <h2 class="mt-3 mb-1" style="padding-top: 100px;">찾아오는 길</h2> <br>
-
-                            <p>리서울갤러리
-                                서울시 마포구 양화로 45 메세나폴리스몰 178호
-                                02-720-0319  </p>
+                    <div style="display: flex; justify-content: center; height: 500pt;"> 
+                        
+                        <div style="background-color: #F8F8F8; padding:20px; width: 70%; height: 130%; border-radius: 20px;">
+                            <h5 style="text-align: center;">'홍세연' 작가님께 글 남기기</h5>
+                            <form style="text-align: center;" action="{% url 'comment_create1' exhibition=1 %}" method="post">
+                                {% csrf_token %}
+                                <input type="text" name="commentText" style="padding: 7px; width: 80%;"> 
+                                <input type="submit" value="게시" style="padding: 10px; margin-left: 10px;" > 
+                            </form>
+                            <br>
+                            <div style="border: 0.8px solid; height: 85%; padding: 10px; border-radius: 5%;">
+                                <div class="comment" style="width: auto; ">
+                                    {% for comments in comment_form %}
+                                        {% if comments.exhibition == 1 %}
+                                            <div style="padding: 10px; border-bottom: 1px solid gray">
+                                                <p>{{ comments.comment }} 
+                                                    <span style="float:right; color:gray;">{{ comments.date|date:'m월 d일' }}</span>
+                                                </p>
+                                            </div>
+                                        {% endif %}
+                                    {% empty %}
+                                    <div style="padding: 10px; border-bottom: 1px solid gray">
+                                        <p>댓글이 없습니다. 글을 남겨주세요!</p>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
         </main>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <div class="site-footer-wrap d-flex align-items-center">
-                            <p class="copyright-text mb-0 me-4">Copyright © 2036 Waso Strategy Co., Ltd.</p>
-
-                            <ul class="social-icon">
-                                <li><a href="https://facebook.com/tooplate" class="social-icon-link bi-facebook"></a></li>
-
-                                <li><a href="https://pinterest.com/tooplate" class="social-icon-link bi-pinterest"></a></li>
-    
-                                <li><a href="https://twitter.com/minthu" class="social-icon-link bi-twitter"></a></li>
-    
-                                <li><a href="https://www.youtube.com/tooplate" class="social-icon-link bi-youtube"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 col-12">
-                    	<p class="copyright-text mb-0 me-4">Waso HTML Template is designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
-                    </div>
-                    
-                </div>
-            </div>
-        </footer>
 
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
@@ -137,4 +129,3 @@ Free Bootstrap 5 HTML Template
 
     </body>
 </html>
-
