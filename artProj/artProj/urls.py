@@ -22,6 +22,7 @@ import artApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', artApp.views.index, name='index'),
+    path('home',artApp.views.index, name='index'), 
     
     # 좋아요 증가 url
     path('exhibition1/like/1/', artApp.views.like1, name='like1' ),

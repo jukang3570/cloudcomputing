@@ -44,7 +44,7 @@ Free Bootstrap 5 HTML Template
             <div class="container">
                 <!-- 사이드바 제거함 -->
 
-                <a href="http://127.0.0.1:8000/" class="navbar-brand">ArtPark</a>
+                <a href="../home" class="navbar-brand">ArtPark</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,12 +56,12 @@ Free Bootstrap 5 HTML Template
             <!-- 사진 부분 -->
             <section class="projects section-padding">
                 <div class="container">
-                    <button style="background-color:white; border: none; width: 50px; float: left; margin-left: 150px; margin-top: 150px;" onclick="location.href='http://127.0.0.1:8000/exhibition2/3page';">
-                        <img src="{%static 'images/next2.png' %}" alt="" style="width: 100%;">
+                    <button style="background-color:white; border: none; width: 50px; float: left; margin-left: 150px; margin-top: 150px;" onclick="location.href='3page';">
+                        <img src="https://yjk-s3-bucket.s3.amazonaws.com/images/next2.png" alt="" style="width: 100%;">
                     </button>
-                    <button style="background-color:white; border: none; width: 50px; float: right; margin-right: 150px; margin-top: 150px;"  onclick="location.href='http://127.0.0.1:8000';">
-                        <img src="{%static 'images/next1.png' %}" alt="" style="width: 100%;">
-                    </button>
+                    <a style="background-color:white; border: none; width: 50px; float: right; margin-right: 150px; margin-top: 150px;"  href="{% url 'index' %}">
+                        <img src="https://yjk-s3-bucket.s3.amazonaws.com/images/next1.png" alt="" style="width: 100%;">
+                    </a>
                     <div style="display: flex; justify-content: center; height: 500pt;"> 
                         
                         <div style="background-color: #F8F8F8; padding:20px; width: 70%; height: 130%; border-radius: 20px;">
