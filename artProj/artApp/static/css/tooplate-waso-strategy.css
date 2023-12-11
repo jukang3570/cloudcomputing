@@ -407,7 +407,7 @@ strong {
 }
 
 .selection-artist-page-hong{
-  background-image: url('../images/artist_page_hong/background.jpg');
+  background-image: url('https://yjk-s3-bucket.s3.amazonaws.com/images/artist_page_hong/background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -418,7 +418,7 @@ strong {
 }
 
 .selection-artist-page-yoo{
-  background-image: url('../images/artist_page_yoo/background.jpg');
+  background-image: url('https://yjk-s3-bucket.s3.amazonaws.com/images/artist_page_yoo/background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -429,7 +429,7 @@ strong {
 }
 
 .selection-artist-page-pyo{
-  background-image: url('../images/artist_page_pyo/background1.jpg');
+  background-image: url('https://yjk-s3-bucket.s3.amazonaws.com/images/artist_page_pyo/background1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1097,8 +1097,8 @@ ul, li {list-style:none;}
 .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
 
 .slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
-.slidebox .slide-control [class*="control"] label.prev {left:-50px;background: url('../images/icon/left_ic.png') center center / 50% no-repeat; width: 150px; height: 150px;}
-.slidebox .slide-control [class*="control"] label.next {right:-50px;background: url('../images/icon/right_ic.png') center center / 50% no-repeat;width: 150px; height: 150px;}
+.slidebox .slide-control [class*="control"] label.prev {left:-50px;background: url('https://yjk-s3-bucket.s3.amazonaws.com/images/icon/left_ic.png') center center / 50% no-repeat; width: 150px; height: 150px;}
+.slidebox .slide-control [class*="control"] label.next {right:-50px;background: url('https://yjk-s3-bucket.s3.amazonaws.com/images/icon/right_ic.png') center center / 50% no-repeat;width: 150px; height: 150px;}
 
 [name="slide"] {display:none;}
 #slide01:checked ~ .slidelist .slideitem {left:0;}
