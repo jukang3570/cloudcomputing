@@ -1,9 +1,10 @@
 from bs4 import Comment
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from .models import Post
 from .models import Comment
 from .forms import CommentForm
+from django.core.mail import EmailMessage
 
 # Create your views here.
 def index(request):
@@ -214,3 +215,22 @@ def yoo_detail(request):
     print(posts)
     return render(request, 'artApp/artist/artist-page-yoo.html', {'posts': posts})
 
+# 이메일 발송
+def send_email(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        address = request.POST.get('email')
+        message = request.POST.get('message')
+
+        email = EmailMessage(
+            title,
+            message,
+            to=[address]
+        )
+        try:
+            email.send()
+            return HttpResponse('이메일이 성공적으로 전송되었습니다.')
+        except:
+            return HttpResponse('이메일 전송 중 오류가 발생했습니다.')
+
+    return HttpResponse('잘못된 요청입니다.')

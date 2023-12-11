@@ -74,5 +74,8 @@ urlpatterns = [
 
     # 유근택 작가 페이지
     path('artist-page-yoo.html', artApp.views.yoo_detail,name='yoo_detail'),
+
+    # 이메일보내기
+    path('send_email/', artApp.views.send_email, name='send_email'),
 ]
 
